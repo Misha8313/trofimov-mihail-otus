@@ -1,0 +1,10 @@
+<h2>Форма добавления слов</h2>
+<div>
+  <textarea type="text" [formControl]="words" cols="50" rows="10"></textarea>
+</div>
+<div>
+  <button (click)="addWords()">Добавить слова</button>
+</div>
+<div>
+  <button (click)="clear()">Очистить форму</button>
+</div>

@@ -1,0 +1,12 @@
+#main-container {
+  display: flex;
+  justify-content: space-evenly ;
+}
+
+#right-size {
+  display: flex;
+}
+
+#add-word {
+  color: firebrick;
+}
