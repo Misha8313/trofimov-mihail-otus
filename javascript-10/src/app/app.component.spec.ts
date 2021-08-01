@@ -1,5 +1,8 @@
+import { StorageWordsService } from './storage-words.service';
+import { AddWordsService } from './add-words.service';
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { TranslateService } from './translate.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -7,6 +10,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers:[
+        TranslateService, AddWordsService, StorageWordsService
+      ]
     }).compileComponents();
   });
 
@@ -26,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('homework-angular app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain('homework-angular app is running!');
   });
 });

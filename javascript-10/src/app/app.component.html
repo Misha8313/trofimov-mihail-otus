@@ -1,15 +1,8 @@
-<div id="main-container">
-  <div id="left-side">
-    <div id="add-word">
-      <app-add-words></app-add-words>
-    </div>
-    <div id="list-word">
-      <app-list-words></app-list-words>
-    </div>
-  </div>
-  <div id="right-side">
-    <div id="exercise">
-      <app-exercises></app-exercises>
-    </div>
-  </div>
-</div>
+<h1>homework-angular app is running!</h1>
+<nav>
+  <a routerLink="/exercises">Упраженение</a>
+  <a routerLink="/add-words">Добавить слова</a>
+  <a routerLink="/list-words">Cписок слов</a>
+</nav>
+
+<router-outlet></router-outlet>

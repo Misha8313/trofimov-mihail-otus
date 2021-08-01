@@ -1,6 +1,6 @@
 <p>Выполнение упражнения</p>
 
-<div>Введите перевод слова {{ currentWord.En }}</div>
+<div>Введите перевод слова {{currentWord?.En}}</div>
 <input type="text" [formControl]="translatedWord" />
 <div>{{ result }}</div>
 <button (click)="nextWord()">Далее</button>
