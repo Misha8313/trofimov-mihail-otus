@@ -8,9 +8,7 @@ export class TranslateService {
   constructor(private http: HttpClient) {}
 
   getTranslationWord(word: string) {
-    console.log(
-      `https://api.mymemory.translated.net/get?q=${word}&langpair=en|ru`
-    );
+  
     return this.http.get<ResponseTranslate>(
       `https://api.mymemory.translated.net/get?q=${word}&langpair=en|ru`
     );

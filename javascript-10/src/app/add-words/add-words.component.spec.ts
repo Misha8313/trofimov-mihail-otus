@@ -1,4 +1,6 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateService } from '../translate.service';
 
 import { AddWordsComponent } from './add-words.component';
 
@@ -8,7 +10,10 @@ describe('AddWordsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddWordsComponent ]
+      declarations: [ AddWordsComponent ],
+      providers:[
+        TranslateService, HttpClient, HttpHandler
+      ]
     })
     .compileComponents();
   });

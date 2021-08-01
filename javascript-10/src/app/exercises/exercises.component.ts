@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./exercises.component.css'],
 })
 export class ExercisesComponent implements OnInit {
-  currentWord: Word = { En: '', Ru: '' };
+  currentWord: Word;
   translatedWord = new FormControl('');
   result: string = '';
   constructor(private storageWordsService: StorageWordsService) {
