@@ -8,7 +8,7 @@ const RESULT = { 'files': [], 'dirs': [] };
 
 const getDirectoryContent = (dirPath) => {
 
-    if (Boolean(dirPath) === false) {
+    if (!dirPath) {
         return RESULT;
     }
 
@@ -28,7 +28,7 @@ const getDirectoryContent = (dirPath) => {
                     return;
                 }
 
-                if (Boolean(stats.isDirectory())) {
+                if (stats.isDirectory()) {
                     RESULT.dirs.push(pathItem);
                     completed++;
                     // РЕКУРСИЯ
