@@ -8,7 +8,7 @@ const RESULT = { 'files': [], 'dirs': [] };
 
 const getDirectoryContent = (dirPath) => {
 
-    if (!dirPath) {
+    if (!Boolean(dirPath)) {
         return RESULT;
     }
 
